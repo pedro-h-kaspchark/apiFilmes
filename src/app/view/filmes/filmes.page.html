@@ -20,7 +20,7 @@
   </ion-list>
 
   <ion-list>
-    <ion-item buttom *ngFor="let item of (resultados | async)" [routerLink]="['/', 'filmes-detalhes', item.imdb]">
+    <ion-item buttom *ngFor="let item of (resultados | async)" [routerLink]="['/', 'filmes-detalhes', item.imdbID]">
       <ion-avatar slot="start">
         <img [src]="item.Poster" (*ngIf)="item.Poster != 'N/A'" />
       </ion-avatar>

@@ -14,7 +14,7 @@ export enum TipoDeBusca{
 })
 export class FilmeService {
   private url = 'http://www.omdbapi.com/';
-  private apiKey = 'a7490c1'
+  private apiKey = '94c75f00'
   
   constructor(private http: HttpClient){ }
 
@@ -22,7 +22,7 @@ export class FilmeService {
     return this.http.get(`${this.url}?s=${encodeURI(titulo)}&type=${type}&apikey=${this.apiKey}`);
   }
 
-  pegarDetalhes(id: string){
+  buscarDetalhado(id: any){
     return this.http.get(`${this.url}?i=${id}&plot=full&apikey=${this.apiKey}`);
   }
 }
